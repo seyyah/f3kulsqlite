@@ -14,9 +14,9 @@ function tc() {
 		function($value) {
 			if (!F3::exists('message')) {
 				if (empty($value))
-					F3::set('message','TC should not be blank');
-				elseif (strlen($value)>127)
-					F3::set('message','TC is too long');
+					F3::set('message','TC boş bırakılamaz.');
+				elseif (strlen($value)<>3)
+					F3::set('message','TC, tam olarak 11 haneli olmalı.');
 				elseif (strlen($value)<3)
 					F3::set('message','TC is too short');
 			}
